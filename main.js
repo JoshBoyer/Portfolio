@@ -1,7 +1,9 @@
 /* Renders PROJECTS and EXPERIMENTS (from data.js) into the homepage grids. */
 
 function cardHTML(item) {
-  const tags = (item.tags || [])
+  const tagList = [...(item.tags || [])];
+  if (item.private) tagList.push("private repo");
+  const tags = tagList
     .map((t) => `<span class="tag">${t}</span>`)
     .join("");
   const status = item.status
