@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josh Boyer — Portfolio</title>
+  <meta name="description" content="Portfolio of Josh Boyer — projects, work, and experiments." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="brand">JB<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experiments">Experiments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="hero-kicker">Hi, I’m</p>
+      <h1 class="hero-title">Josh Boyer</h1>
+      <p class="hero-sub">
+        I build things for the web — polished products, useful tools, and the
+        occasional strange experiment. This is where I share what I’m working on.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See my work</a>
+        <a href="#experiments" class="btn btn-ghost">Browse experiments</a>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section container">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <p>Projects I’ve shipped or am actively building.</p>
+      </div>
+      <div id="work-grid" class="card-grid"></div>
+    </section>
+
+    <!-- Experiments -->
+    <section id="experiments" class="section container">
+      <div class="section-head">
+        <h2>Experiments</h2>
+        <p>Small, playful things — demos, sketches, and ideas in progress. Click one to run it live.</p>
+      </div>
+      <div id="experiments-grid" class="card-grid"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about-body">
+        <p>
+          I’m a developer who likes turning ideas into working software fast,
+          then refining until it feels right. I care about clean interfaces,
+          performance, and the small details that make things feel good to use.
+        </p>
+        <p>
+          When I’m not shipping, I’m usually tinkering — the
+          <a href="#experiments">experiments</a> section is my public sketchbook.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <div class="contact-card">
+        <h2>Let’s talk</h2>
+        <p>Have a project in mind, or just want to say hi? My inbox is open.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:boyer.josh1985@gmail.com">boyer.josh1985@gmail.com</a>
+          <a class="btn btn-ghost" href="https://github.com/joshboyer" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Josh Boyer · Built by hand, no frameworks.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
