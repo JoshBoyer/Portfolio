@@ -7,3 +7,8 @@
 - Deliberate exclusions: no X/TikTok/IG, no paid, no third-party trackers (privacy-first brand).
 - Forage explicitly scoped out — needs its own /marketing-init in the goForage repo.
 - Full strategy: strategy.md. Config not yet created — suggest /marketing-init next run.
+
+## 2026-07-12 — P1 execution
+- Site DEPLOYED: https://joshboyer.github.io/Portfolio/ (main branch created, set as default, Pages enabled with workflow build, deploy verified 200 + rendering).
+- Shipped: OG/Twitter cards with generated 1200x630 og-image.png; JSON-LD Person schema (sameAs: GitHub/LinkedIn/ws42/goforage); canonical; robots.txt; sitemap.xml.
+- Deferred: joshboyer.ca custom domain (DNS not configured yet — flip canonical/sitemap/og URLs when attached); resume download button (held: PDF contains phone number, awaiting Josh's call); LinkedIn link-back (Josh must do); analytics; cross-links from ws42/goforage.
