@@ -11,9 +11,9 @@
   --paper: #f2eee1;
   --paper-deep: #eae5d2;
   --ink: #1e2d3d;
-  --ink-dim: #5d6b79;
-  --grid: rgba(30, 45, 61, 0.09);
-  --grid-major: rgba(30, 45, 61, 0.16);
+  --ink-dim: #46545f;
+  --grid: rgba(30, 45, 61, 0.045);
+  --grid-major: rgba(30, 45, 61, 0.09);
   --redline: #d64a24;          /* inspection-stamp orange-red */
   --blueline: #2456a6;         /* drafting blue */
   --shadow: rgba(30, 45, 61, 0.85);
@@ -32,9 +32,9 @@
     --paper: #12283f;
     --paper-deep: #0c1f33;
     --ink: #dbe7f4;
-    --ink-dim: #8aa5c0;
-    --grid: rgba(219, 231, 244, 0.07);
-    --grid-major: rgba(219, 231, 244, 0.13);
+    --ink-dim: #a8bdd4;
+    --grid: rgba(219, 231, 244, 0.04);
+    --grid-major: rgba(219, 231, 244, 0.08);
     --redline: #ff7a4d;
     --blueline: #7fb1f0;
     --shadow: rgba(4, 12, 20, 0.9);
