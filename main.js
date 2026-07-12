@@ -36,8 +36,36 @@ function renderGrid(gridId, items) {
   }
 }
 
+// Career history renders as a vertical timeline rather than cards.
+function renderTimeline(containerId, entries) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  for (const entry of entries) {
+    const item = document.createElement("div");
+    item.className = "timeline-entry";
+    const highlights = (entry.highlights || [])
+      .map((h) => `<li>${h}</li>`)
+      .join("");
+    const tags = (entry.tags || [])
+      .map((t) => `<span class="tag">${t}</span>`)
+      .join("");
+    item.innerHTML = `
+      <div class="timeline-period">${entry.period}</div>
+      <div class="timeline-body">
+        <h3>${entry.role}</h3>
+        <div class="timeline-company">${entry.company}</div>
+        <p>${entry.summary}</p>
+        ${highlights ? `<ul class="timeline-highlights">${highlights}</ul>` : ""}
+        ${tags ? `<div class="card-tags">${tags}</div>` : ""}
+      </div>
+    `;
+    container.appendChild(item);
+  }
+}
+
 renderGrid("work-grid", PROJECTS);
 renderGrid("experiments-grid", EXPERIMENTS);
+renderTimeline("experience-timeline", EXPERIENCE);
 
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
