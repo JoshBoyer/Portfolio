@@ -1,22 +1,26 @@
 /* Renders PROJECTS and EXPERIMENTS (from data.js) into the homepage grids. */
 
-function cardHTML(item) {
+function cardHTML(item, figNumber) {
   const tagList = [...(item.tags || [])];
   if (item.private) tagList.push("private repo");
   const tags = tagList
     .map((t) => `<span class="tag">${t}</span>`)
     .join("");
   const status = item.status
-    ? `<span class="card-status">● ${item.status}</span>`
+    ? `<span class="card-status">${item.status}</span>`
     : "";
   return `
-    <span class="card-emoji">${item.emoji || "🔹"}</span>
+    <span class="card-fig">Fig. ${String(figNumber).padStart(2, "0")}</span>
     <h3>${item.title}</h3>
     ${status}
     <p>${item.description}</p>
     <div class="card-tags">${tags}</div>
   `;
 }
+
+// Figure numbers run continuously across the work and experiment grids,
+// like plates in a drawing set. Fig. 01 is the hero.
+let figCounter = 1;
 
 function renderGrid(gridId, items) {
   const grid = document.getElementById(gridId);
@@ -31,7 +35,8 @@ function renderGrid(gridId, items) {
         card.rel = "noopener";
       }
     }
-    card.innerHTML = cardHTML(item);
+    figCounter += 1;
+    card.innerHTML = cardHTML(item, figCounter);
     grid.appendChild(card);
   }
 }
